@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MyInput = ({ onChange, title, type, name, id }) => {
+export const MyInput = ({ onChange, title, type, name, id, isValid }) => {
   
   const handleChange = (e) => {
     const inputValue = e.target.value;
@@ -10,7 +10,7 @@ export const MyInput = ({ onChange, title, type, name, id }) => {
   
   return( 
     <div>
-    {title}: <input type={type} name={name} id={id} onChange={handleChange}/>
+    {title}: <input type={type} name={name} id={id} onChange={handleChange} isValid={isValid}/>
     </div>
  )
 }
