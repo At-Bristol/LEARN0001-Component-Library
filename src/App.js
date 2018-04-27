@@ -3,6 +3,8 @@ import React from 'react'
 //import Input from './components/Input'
 //import List from './components/List'
 import Form from './components/Form/Form'
+import Selectable from './components/SelectableList/Selectable'
+
 
 const layout = [                
     {                       
@@ -64,6 +66,7 @@ const App = () => {
 const App = () => {
     return(
         <div>
+          <Selectable />
           <Form />
           <Input />
           <List listContent={['Mercury', 'Venus', 'Earth']}/>
