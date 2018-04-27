@@ -44,21 +44,8 @@ class Form extends React.Component {
   validateField(value, id) {
   
   let inputId = id;
-  let fieldType = this.state[inputId].type;
-  let isValid = false;
+  let isValid = this.state[inputId].validate(value);
 
-  switch(fieldType) {
-    case 'text':
-      isValid = value.length >= 2;
-      break;
-    case 'date':
-      isValid = value.length >= 10;
-      break;
-    default:
-      isValid = true;
-      break;
-    }
-    
     let statusCopy = Object.assign({}, this.state);
       statusCopy[inputId].isValid = isValid;
       this.setState(statusCopy);
@@ -78,7 +65,7 @@ class Form extends React.Component {
     return(
       <form onSubmit={this.onSubmit}>  
           {Object.keys(this.state).map((e) => 
-            <MyInput key={e} name={this.state[e].title} id={e} type={this.state[e].type} title={this.state[e].title} onChange={this.changeDetails}/>)}
+            <MyInput key={e} name={this.state[e].title} id={e} type={this.state[e].type} title={this.state[e].title} onChange={this.changeDetails} isValid={this.state[e].isValid}/>)}
           <input type="submit" value="Submit"/>
       </form>  
       )
