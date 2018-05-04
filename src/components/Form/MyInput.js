@@ -10,7 +10,7 @@ export const MyInput = ({ onChange, title, type, name, id, isValid }) => {
   
   return( 
     <div>
-    {title}: <input type={type} name={name} id={id} onChange={handleChange} isValid={isValid}/>
+    {title}: <input type={type} name={name} id={id} onChange={handleChange}/>
     </div>
  )
 }

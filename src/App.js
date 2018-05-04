@@ -3,14 +3,13 @@ import React from 'react'
 //import Input from './components/Input'
 //import List from './components/List'
 import Form from './components/Form/Form'
-import Selectable from './components/SelectableList/Selectable'
+//import Selectable from './components/SelectableList/Selectable'
 
 
 const layout = [                
     {                       
       title: "Name",
       type:  "text",
-      isValid: "false",
       validate: (value) => {
         if (value.length >= 2) {
           return true;
@@ -25,7 +24,6 @@ const layout = [
     {
       title: "Date of Birth",
       type:  "date",
-      isValid: "false",
       validate: (value) => {
         if (value.length === 10) {
           return true;
@@ -34,13 +32,12 @@ const layout = [
           return false;
         }
       },
-      validationErrorMessage: 'Invalid name',
+      validationErrorMessage: 'Invalid date',
       payload:  ""
     },
     {
       title: "Date today",
       type:  "date",
-      isValid: "false",
       validate: (value) => {
         if (value.length === 10) {
           return true;
@@ -49,7 +46,7 @@ const layout = [
           return false;
         }
       },
-      validationErrorMessage: 'Invalid name',
+      validationErrorMessage: 'Invalid date',
       payload:  ""
     }
   ]
