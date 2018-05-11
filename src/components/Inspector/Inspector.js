@@ -18,4 +18,3 @@ const Inspector=({content})=>{
 }
 
 export default Inspector
-
