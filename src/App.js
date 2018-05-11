@@ -3,6 +3,7 @@ import React from 'react'
 //import Input from './components/Input'
 //import List from './components/List'
 import Form from './components/Form/Form'
+import Input from './components/Input/Input'
 //import Selectable from './components/SelectableList/Selectable'
 
 
@@ -55,6 +56,7 @@ const App = () => {
     return(
         <div>
           <Form layout={layout} />
+          <Input />
         </div>
     )
 }
